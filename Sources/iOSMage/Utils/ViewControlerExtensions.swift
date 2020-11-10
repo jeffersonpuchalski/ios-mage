@@ -20,4 +20,8 @@ public extension UIViewController {
     static func instance() -> Self {
         return genericInstance()
     }
+    
+    static func instance(nibName: String, bundle: Bundle) -> Self {
+        return genericInstance(for: nibName, inBundle: bundle)
+    }
 }
