@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="BarlowSemiCondensed-Regular.ttf">
+            <string>BarlowSemiCondensed-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Console View Controller-->
+        <scene sceneID="BdV-Aa-MEX">
+            <objects>
+                <viewController storyboardIdentifier="ConsoleViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="iKR-tx-ysO" customClass="ConsoleViewController" customModule="Beneficio" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="w7C-fM-99v">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Console Application" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="re9-9n-CCw">
+                                <rect key="frame" x="8" y="60" width="398" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="Fje-3l-w3P"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="BarlowSemiCondensed-Regular" family="Barlow Semi Condensed" pointSize="42"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type command here..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mwY-J9-bgD" userLabel="cmdInput">
+                                <rect key="frame" x="20" y="124" width="374" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="Vgv-F7-r9h"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="iKR-tx-ysO" id="xAX-F1-Spi"/>
+                                </connections>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="For help please type help &lt;command&gt;" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="IGu-yt-430" userLabel="cmdOutput">
+                                <rect key="frame" x="20" y="170" width="374" height="692"/>
+                                <color key="backgroundColor" systemColor="darkTextColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="xa3-FE-6Sl"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="re9-9n-CCw" firstAttribute="leading" secondItem="xa3-FE-6Sl" secondAttribute="leading" constant="8" id="3CQ-Fa-RpN"/>
+                            <constraint firstItem="re9-9n-CCw" firstAttribute="top" secondItem="xa3-FE-6Sl" secondAttribute="top" constant="16" id="EC4-v9-e1y"/>
+                            <constraint firstItem="xa3-FE-6Sl" firstAttribute="trailing" secondItem="re9-9n-CCw" secondAttribute="trailing" constant="8" id="Hnt-c2-7sy"/>
+                            <constraint firstItem="IGu-yt-430" firstAttribute="bottom" secondItem="xa3-FE-6Sl" secondAttribute="bottom" id="KJs-xZ-J4l"/>
+                            <constraint firstItem="xa3-FE-6Sl" firstAttribute="trailing" secondItem="mwY-J9-bgD" secondAttribute="trailing" constant="20" id="O2e-wL-dpf"/>
+                            <constraint firstItem="mwY-J9-bgD" firstAttribute="top" secondItem="re9-9n-CCw" secondAttribute="bottom" constant="16" id="Qad-Cl-jdv"/>
+                            <constraint firstItem="IGu-yt-430" firstAttribute="top" secondItem="mwY-J9-bgD" secondAttribute="bottom" constant="12" id="h05-Bd-YXe"/>
+                            <constraint firstItem="xa3-FE-6Sl" firstAttribute="trailing" secondItem="IGu-yt-430" secondAttribute="trailing" constant="20" id="lJ0-zi-AEW"/>
+                            <constraint firstItem="IGu-yt-430" firstAttribute="leading" secondItem="xa3-FE-6Sl" secondAttribute="leading" constant="20" id="sh4-V4-2Fb"/>
+                            <constraint firstItem="mwY-J9-bgD" firstAttribute="leading" secondItem="xa3-FE-6Sl" secondAttribute="leading" constant="20" id="wVk-EL-O21"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cmdInput" destination="mwY-J9-bgD" id="g1f-w2-na1"/>
+                        <outlet property="cmdOutput" destination="IGu-yt-430" id="2xt-Du-48S"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="J4S-aa-JS9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="57.971014492753625" y="37.5"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="darkTextColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

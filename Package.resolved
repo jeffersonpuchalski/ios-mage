@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "KeychainManager",
+        "repositoryURL": "https://github.com/jeffersonpuchalski/KeychainManager.git",
+        "state": {
+          "branch": null,
+          "revision": "f76462815fd05975c1e25ae48d32205884373ef0",
+          "version": "1.1.0"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
