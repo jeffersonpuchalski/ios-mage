@@ -1,11 +1,16 @@
 # Changelog
 
-iOS mage is a framework who can help developers build apps optimizing his workflow, saving some precious time.
+iOS mage is a framework that can help developers build apps optimizing their workflow, saving some precious time.
+
+## [1.1.2] - 2020-13-01
+### Added
+
+- A static method who can instance a generic view controller without explicit nib.
 
 ## [1.1.1] - 2020-11-10
 ### Changed
 
-- Alteration of method accessor from Reachbility.isConnect method to public, allowing be used in other classes.
+- Alteration of method accessor from Reachability.isConnect method to public, allowing be used in other classes.
 
 ### Fixed
 
