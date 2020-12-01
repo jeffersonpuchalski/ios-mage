@@ -30,14 +30,4 @@ public extension UIViewController {
     static func instance(nibName: String, bundle: Bundle) -> Self {
         return genericInstance(for: nibName, inBundle: bundle)
     }
-    
-    /**
-     Method responsible for instance and generate a UIViewController object whiout any nib.
-     - Parameters:
-        - T: A generic view controller who needs match a base UIViewController type.
-     - Returns: A generic instance created on object.
-     */
-    static func instanceWithoutNib<T: UIViewController>() -> T {
-        return T.init()
-    }
 }
